@@ -1,0 +1,13 @@
+#### NOTA ####
+    
+    --Os scripts deste diretório foram feitos para instâncias VM CentOS9 (Vagrant)--
+
+    Vagrant box: "eurolinux-vagrant/centos-stream-9"
+
+
+#### IMPORTANTE ####
+
+    Se você tiver erro ao tentar usar o Vagrantfile do repositório,
+    provavelmente será por conta da configuração da VM:
+
+    Altere o IP de "private_network" para um intervalo válido na sua rede.
