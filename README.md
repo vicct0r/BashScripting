@@ -36,3 +36,4 @@ Repositório contendo coleção de scripts Bash automatizados para administraç�
 - Só **deve existir um Vagrantfile** no diretório.
 - Scripts marcados como "CentOS9" precisarão de adaptações para Ubuntu/Jammy64.
 - Verifique as notas em cada diretório para requisitos específicos.
+- O **Vagrant** precisa de um Hypervisor para funcionar. Mas você não deve ter mais de um gerênciando as VMs pois isso gera erro de hierarquia entre os Hypervisors.
