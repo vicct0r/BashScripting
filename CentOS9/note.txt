@@ -1,0 +1,5 @@
+#### NOTA ####
+    
+    --Os scripts deste diretório foram feitos para instâncias VM CentOS9 (Vagrant)--
+
+    Vagrant box: "eurolinux-vagrant/centos-stream-9"
