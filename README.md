@@ -16,9 +16,23 @@ Repositório contendo coleção de scripts Bash automatizados para administraç�
 ## 🚀 Modo de Uso
 
 ### 1. Configuração do Ambiente
-```bash
-# Clone o repositório
-git clone [URL_DO_REPOSITORIO]
+- Crie o Vagrant Box:  
+  `vagrant init <box_name>`
+- Rode a instância:  
+  `vagrant up`
+- Acesse a VM:  
+  `vagrant ssh`
 
-# Acesse o diretório do script desejado
-cd [DIRETORIO_DO_SCRIPT]
+### 2. Execução do Script
+- Dentro da VM, crie/copie o arquivo:  
+  `vim <nome_arquivo>.sh`
+- Conceda permissões:  
+  `sudo chmod +x <nome_arquivo>.sh`
+- Execute:  
+  `./<nome_arquivo>.sh`
+
+### Considerações Importantes
+- Para executar os comandos **vagrant** você deve estar no diretório do **Vagrantfile**.
+- Só **deve existir um Vagrantfile** no diretório.
+- Scripts marcados como "CentOS9" precisarão de adaptações para Ubuntu/Jammy64.
+- Verifique as notas em cada diretório para requisitos específicos.
