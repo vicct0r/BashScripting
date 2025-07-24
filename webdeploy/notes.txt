@@ -1,0 +1,13 @@
+Temos 2 scripts neste diretório:
+    - managment.sh -> encarregado de fazer a configuração
+    - webdep.sh -> encarregado de mandar o script principal para as instâncias
+
+
+Algumas considerações:
+    - É bom que você tenha o mesmo Usuário para todas as instâncias.
+    - Também é essencial ter uma conexão ssh estabelecida com a chave gerada por "ssh key-gen"
+    - O user também deve ter sudo perm sem que ele tenha que usar senha em todas as vezes que usar sudo 
+    (Isso permite com que o script rode sem que ele peça senha para as operações como "systemctl restart" ou semelhantes).
+
+
+Devemos levar em conta também o arquivo "remote_host"; Com base nele temos todos os hosts para serem acessados.
