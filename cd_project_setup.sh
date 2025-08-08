@@ -1,5 +1,5 @@
 #!/bin/bash
-IPV4=192.168.56.10
+IPV4=18.229.117.211
 DIRETORIO=/home/$USER/CD-API-Service
 sudo apt update -y
 sudo apt install -y python3-venv python3-dev git libpq-dev postgresql postgresql-contrib nginx curl
@@ -16,7 +16,7 @@ GRANT ALL PRIVILEGES ON DATABASE cd_database TO victor;
 EOF
 
 git clone https://github.com/vicct0r/CD-API-Service.git
-sudo chown -R vagrant:www-data $DIRETORIO
+sudo chown -R $USER:www-data $DIRETORIO
 cd $DIRETORIO
 
 python3 -m venv venv
@@ -52,7 +52,7 @@ Requires=gunicorn.socket
 After=network.target
 
 [Service]
-User=vagrant
+User=$USER
 Group=www-data
 WorkingDirectory=$DIRETORIO
 ExecStart=$DIRETORIO/venv/bin/gunicorn \
@@ -68,7 +68,7 @@ WantedBy=multi-user.target
 EOF
 
 sudo chmod 640 $DIRETORIO/.env
-sudo chown vagrant:www-data $DIRETORIO/.env
+sudo chown $USER:www-data $DIRETORIO/.env
 
 sudo systemctl start gunicorn.socket
 sudo systemctl enable gunicorn.socket
